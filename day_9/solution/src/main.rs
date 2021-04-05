@@ -3,7 +3,7 @@ use std::fs::File;
 use std::io::{ BufReader, BufRead, Error};
 
 fn is_sum_possible(sum_number: i64, numbers: &[i64]) -> bool {
-	let mut numbers_dict:HashMap<i64, i64>  = HashMap::new();
+	let mut numbers_dict:HashMap<i64, i64>  = HashMap::new(); /* could be replaced by an hashset */
 
 	for num in numbers.iter() {
 		if numbers_dict.contains_key(&num) {
